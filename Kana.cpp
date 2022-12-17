@@ -1,5 +1,4 @@
 #include <string>
-#include <iostream>
 #include "Kana.h"
 
 
@@ -11,7 +10,6 @@ std::string Kana::getRandomKana() {
     int index = rand() % HANGUL.size();
     index = index / 3;
     index = index * 3;
-    std::cout << HANGUL.size() << std::endl;
     int type = rand() % 2;
     std::string kanas = type ? HIRAGANA : KATAKANA;
     return kanas.substr(index, 3);
