@@ -54,7 +54,7 @@ bool MyWindow::on_key_event(guint keyval, guint, Gdk::ModifierType, const Glib::
         }
         std::ostringstream accStr;
         accStr.precision(2);
-        accStr << "  정확도: " << std::fixed << get_accuracy() << "%";
+        accStr << "  정확도: " << std::fixed << get_accuracy() * 100 << "%";
         accLabel.set_text(accStr.str());
     }
     return false;
